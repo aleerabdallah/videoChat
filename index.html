@@ -5,13 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Video Chat</title>
     <script src="https://cdn.tailwindcss.com"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   </head>
-  <body class="bg-gray-900 text-white min-h-screen flex flex-col">
+  <body class="bg-[#121528] text-white">
     <!-- Header -->
-    <header class="bg-gray-800 py-4 shadow-md">
-      <h1 class="text-center text-3xl font-bold text-teal-400">Welcome</h1>
-    </header>
-    <main class="flex-1 flex flex-col md:flex-row gap-4 p-4"></main>
+    <main class="relative h-screen">
+      <section class="full-height-section w-full from-purple-900 to-blue-800 flex items-center justify-center overflow-hidden">
+        <!-- Placeholder for video-->
+        <!-- <div class="text-center">
+            <div class="w-32 h-32 rounded-full bg-gray-700/50 mx-auto mb-6 flex items-center justify-center">
+                <i class="fas fa-user text-5xl text-gray-400"></i>
+            </div>
+            <h2 class="text-2xl font-medium mb-2">Alex Johnson</h2>
+            <p class="text-gray-300">Connecting...</p>
+        </div> -->
+        <!-- <img src="https://images.pexels.com/photos/34155611/pexels-photo-34155611.jpeg" alt="" srcset=""> -->
+        <!-- <img src="https://images.pexels.com/photos/34155611/pexels-photo-34155611.jpeg" alt="" srcset="" class="max-w-full max-h-full">  -->
+        <!-- <video src="https://www.pexels.com/download/video/10442348/" autoplay ></video> -->
+      </section>
+      <!-- Controls -->
+      <div class="flex justify-center space-x-6 py-4 fixed bottom-6 left-0 right-0 z-20">
+          <button class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center hover:bg-gray-600 transition-colors">
+              <i class="fas fa-microphone"></i>
+          </button>
+          <button class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center hover:bg-gray-600 transition-colors">
+              <i class="fas fa-video"></i>
+          </button>
+          <button class="w-12 h-12 rounded-full bg-red-500 flex items-center justify-center hover:bg-red-600 transition-colors">
+              <i class="fas fa-phone-slash"></i>
+          </button>
+          <button class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center hover:bg-gray-600 transition-colors">
+              <i class="fas fa-desktop"></i>
+          </button>
+          <button class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center hover:bg-gray-600 transition-colors">
+              <i class="fas fa-ellipsis-h"></i>
+          </button>
+        </div>
+    </main>
     <script src="main.js"></script>
   </body>
 </html>
