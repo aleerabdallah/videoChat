@@ -10,7 +10,7 @@
   <body class="bg-[#121528] text-white">
     <!-- Header -->
     <main class="relative h-screen">
-      <section class="full-height-section w-full from-purple-900 to-blue-800 flex items-center justify-center overflow-hidden">
+      <section class="full-height-section w-full from-purple-900 to-blue-800 flex items-center justify-center overflow-hidden relative">
         <!-- Placeholder for video-->
         <!-- <div class="text-center">
             <div class="w-32 h-32 rounded-full bg-gray-700/50 mx-auto mb-6 flex items-center justify-center">
@@ -20,18 +20,33 @@
             <p class="text-gray-300">Connecting...</p>
         </div> -->
         <!-- <img src="https://images.pexels.com/photos/34155611/pexels-photo-34155611.jpeg" alt="" srcset=""> -->
-        <!-- <img src="https://images.pexels.com/photos/34155611/pexels-photo-34155611.jpeg" alt="" srcset="" class="max-w-full max-h-full">  -->
-        <!-- <video src="https://www.pexels.com/download/video/10442348/" autoplay ></video> -->
+        <!-- <img src="https://images.pexels.com/photos/34155611/pexels-photo-34155611.jpeg" alt="" srcset="" class="max-w-full max-h-full object-fill">  -->
+        <video id="remoteStream" autoplay muted></video> 
+        
+        <!-- Participant card on the right side -->
+        <div class="participant-card border-t-red-100 fixed top-[50%]  right-[5%] bottom-[5%] w-[25%] h-[40%]">
+            <div class="w-full h-full relative">
+                <!-- Video feed placeholder -->
+                <div class="">
+                    <video id="localStream" autoplay ></video>
+                </div>
+            </div>
+            
+            <!-- You could replace with actual video -->
+            <!-- <video class="w-full h-full object-cover" autoplay muted></video> -->
+        </div>
+
+
       </section>
       <!-- Controls -->
       <div class="flex justify-center space-x-6 py-4 fixed bottom-6 left-0 right-0 z-20">
-          <button class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center hover:bg-gray-600 transition-colors">
-              <i class="fas fa-microphone"></i>
+          <button class="w-12 h-12 rounded-full bg-red-600 flex items-center justify-center hover:bg-gray-600 transition-colors">
+              <i class="fas fa-microphone-slash"></i>
           </button>
-          <button class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center hover:bg-gray-600 transition-colors">
-              <i class="fas fa-video"></i>
+          <button id="toggleCameraBtn" class="w-12 h-12 rounded-full bg-red-600 flex items-center justify-center hover:bg-gray-600 transition-colors">
+              <i class="fas fa-video-slash"></i>
           </button>
-          <button class="w-12 h-12 rounded-full bg-red-500 flex items-center justify-center hover:bg-red-600 transition-colors">
+          <button id="startCall" class="w-12 h-12 rounded-full bg-red-500 flex items-center justify-center hover:bg-red-600 transition-colors">
               <i class="fas fa-phone-slash"></i>
           </button>
           <button class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center hover:bg-gray-600 transition-colors">
